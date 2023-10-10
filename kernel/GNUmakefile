@@ -43,6 +43,8 @@ $(eval $(call DEFAULT_VAR,LDFLAGS,$(DEFAULT_LDFLAGS)))
 
 # Internal C flags that should not be changed by the user.
 override CFLAGS += \
+	-Wimplicit \
+	-Wunused \
     -Wall \
     -Wextra \
     -std=gnu11 \
@@ -52,6 +54,8 @@ override CFLAGS += \
     -fno-lto \
     -fPIE \
     -m64 \
+    -w \
+    -g \
     -march=x86-64 \
     -mno-80387 \
     -mno-mmx \
