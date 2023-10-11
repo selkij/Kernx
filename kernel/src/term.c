@@ -22,6 +22,8 @@ void term_init(void) {
     ft_ctx = flanterm_fb_simple_init(
             framebuffer->address, framebuffer->width, framebuffer->height, framebuffer->pitch
     );
+
+    printf("Terminal initialized");
 }
 
 void print(const char *str) {
@@ -32,5 +34,5 @@ void print(const char *str) {
 
 void printf(const char *str) {
     print(str);
-    print('\n');
+    print("\n");
 }

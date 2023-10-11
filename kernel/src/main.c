@@ -10,9 +10,8 @@ void hcf(void) {
 void _start(void) {
     term_init();
 
-    printf("Hello, World!");
-    printf("Hiii");
-
+    printf("Kernx");
+    
     // We're done, just hang...
     hcf();
 }

@@ -3,6 +3,6 @@
 
 #include <stddef.h>
 
-size_t strlen(const char *str);
+size_t strlen(char *str);
 
 #endif //KERNX_STR_H
