@@ -6,6 +6,7 @@
 #include <limine.h>
 
 #include "include/term.h"
+#include "include/cpu/gdt.h"
 
 
 #endif //KERNX_MAIN_H
