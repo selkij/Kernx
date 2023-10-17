@@ -4,8 +4,9 @@ Kernx is just a kernel made in C just for entertainment, nothing serious here.
 
 ## ⚙️ Installation
 
-Clone project with `git install https://github.com/Kiirx/Kernx`,
-install packages `xorriso nasm qemu-system-x86_64 clang git`
+Install packages `make xorriso nasm qemu-system-x86_64 clang git`
+
+Clone project with `git install https://github.com/Kiirx/Kernx`
 
 ## 🚧 Roadmap
 
