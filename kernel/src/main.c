@@ -9,10 +9,9 @@ void hcf(void) {
 
 void _start(void) {
     term_init();
-    printf("a");
     gdt_init();
 
-    printf("Kernx");
+    lprint(2, "Kernx");
     
     // We're done, just hang...
     hcf();

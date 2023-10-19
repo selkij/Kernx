@@ -1,7 +1,10 @@
 {
     "files.associations": {
         "gdt.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "term.h": "c",
+        "fb.h": "c",
+        "flanterm.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

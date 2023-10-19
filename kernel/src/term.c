@@ -23,7 +23,7 @@ void term_init(void) {
             framebuffer->address, framebuffer->width, framebuffer->height, framebuffer->pitch
     );
 
-    printf("Terminal initialized");
+    lprint(1, "Terminal initialized");
 }
 
 void print(const char *str) {
@@ -35,4 +35,26 @@ void print(const char *str) {
 void printf(const char *str) {
     print(str);
     print("\n");
+}
+
+void lprint(uint8_t level, const char *str) { 
+
+    /*
+    * Levels:
+    * 0 - Info
+    * 1 - Success
+    * 2 - Warning
+    * 3 - Error
+    * 4 - Fatal
+    */
+
+    char* level_prefixes[4] = { LOG_INFO_PREFIX, LOG_SUCCESS_PREFIX, LOG_WARN_PREFIX, LOG_ERROR_PREFIX, LOG_FATAL_PREFIX };
+    char* level_prefixes_compact[4] = { LOG_INFO_PREFIX_COMPACT, LOG_SUCCESS_PREFIX_COMPACT, LOG_WARN_PREFIX_COMPACT, LOG_ERROR_PREFIX_COMPACT, LOG_FATAL_PREFIX_COMPACT };
+    if(LOG_COMPACT_MODE == 1) {
+        print(level_prefixes_compact[level]);
+    } else {
+        print(level_prefixes[level]);
+    }
+
+    printf(str);
 }

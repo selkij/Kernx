@@ -129,5 +129,5 @@ void gdt_init(void) {
 
     set_gdtr(&gdt);
 
-    printf("GDT initialized");
+    lprint(1, "GDT initialized");
 }
