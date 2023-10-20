@@ -48,8 +48,8 @@ void lprint(uint8_t level, const char *str) {
     * 4 - Fatal
     */
 
-    char* level_prefixes[4] = { LOG_INFO_PREFIX, LOG_SUCCESS_PREFIX, LOG_WARN_PREFIX, LOG_ERROR_PREFIX, LOG_FATAL_PREFIX };
-    char* level_prefixes_compact[4] = { LOG_INFO_PREFIX_COMPACT, LOG_SUCCESS_PREFIX_COMPACT, LOG_WARN_PREFIX_COMPACT, LOG_ERROR_PREFIX_COMPACT, LOG_FATAL_PREFIX_COMPACT };
+    char* level_prefixes[5] = { LOG_INFO_PREFIX, LOG_SUCCESS_PREFIX, LOG_WARN_PREFIX, LOG_ERROR_PREFIX, LOG_FATAL_PREFIX };
+    char* level_prefixes_compact[5] = { LOG_INFO_PREFIX_COMPACT, LOG_SUCCESS_PREFIX_COMPACT, LOG_WARN_PREFIX_COMPACT, LOG_ERROR_PREFIX_COMPACT, LOG_FATAL_PREFIX_COMPACT };
     if(LOG_COMPACT_MODE == 1) {
         print(level_prefixes_compact[level]);
     } else {
@@ -57,4 +57,12 @@ void lprint(uint8_t level, const char *str) {
     }
 
     printf(str);
+}
+
+void lprint_test_level(void) {
+    lprint(0, "This is a test");
+    lprint(1, "This is a test");
+    lprint(2, "This is a test");
+    lprint(3, "This is a test");
+    lprint(4, "This is a test");
 }

@@ -11,8 +11,8 @@ void _start(void) {
     term_init();
     gdt_init();
 
-    lprint(2, "Kernx");
-    
+    printf("Kernx");
+
     // We're done, just hang...
     hcf();
 }
