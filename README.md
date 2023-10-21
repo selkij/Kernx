@@ -11,9 +11,13 @@ Clone project with `git install https://github.com/Kiirx/Kernx`
 ## 🚧 Roadmap
 
 -[x] GDT
+
 -[ ] PIC
+
 -[ ] IDT
+
 -[ ] Serial
+
 -[ ] PS/2 Keyboard driver
 
 ## 🚀 Running
